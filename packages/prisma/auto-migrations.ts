@@ -1,10 +1,11 @@
-import dotEnv from "dotenv";
+// import dotEnv from "dotenv";
+import { config } from "dotenv";
 import { exec as execCb } from "node:child_process";
 import { promisify } from "node:util";
 
 import { isPrismaAvailableCheck } from "./is-prisma-available-check";
 
-dotEnv.config({ path: "../../.env" });
+config({ path: "../../.env" });
 
 const exec = promisify(execCb);
 
